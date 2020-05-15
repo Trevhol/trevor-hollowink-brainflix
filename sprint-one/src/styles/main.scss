@@ -85,3 +85,14 @@
     border-radius: 4px;
   }
 }
+.side-video {
+  display: flex;
+  flex-direction: column;
+  &__image {
+    width: 120px;
+    height: 70px;
+  }
+  &__section {
+    display: flex;
+  }
+}
