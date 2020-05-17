@@ -1,0 +1,29 @@
+.side-video {
+  display: flex;
+  flex-direction: column;
+  &__section {
+    margin: 0 16px 24px 16px;
+  }
+  &__image {
+    width: 120px;
+    height: 70px;
+    margin-right: 16px;
+  }
+  &__section {
+    display: flex;
+  }
+  &__name {
+    margin: 0;
+    font-family: "Avenir Demi";
+    font-size: 0.89rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  &__author {
+    margin: 16px 0 0 0;
+    font-family: "Avenir Regular";
+  }
+}

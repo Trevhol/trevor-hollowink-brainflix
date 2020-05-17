@@ -56,19 +56,19 @@ class App extends Component {
     sideBar: [
       {
         id: "1",
-        title: "Become A Travel Pro In One Easy Lesson...",
+        title: "Become A Travel Pro In One Easy Lesson",
         channel: "Scotty Cranmer",
         image: videoOne,
       },
       {
         id: "2",
-        title: "Les Houches The Hidden Gem Of The...",
+        title: "Les Houches The Hidden Gem Of The Chamonix",
         channel: "Scotty Cranmer",
         image: videoTwo,
       },
       {
         id: "3",
-        title: "Travel Health Useful Medical Information...",
+        title: "Travel Health Useful Medical Information For",
         channel: "Scotty Cranmer",
         image: videoThree,
       },

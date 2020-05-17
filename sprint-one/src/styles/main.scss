@@ -1,45 +1,9 @@
-// body {
-//   background-color: teal;
-// }
-.main-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 16px;
-  height: 169px;
-  &__logo {
-    width: 200px;
-    height: 32px;
-    margin: 8px;
-  }
-  &__bar {
-    width: 288px;
-    height: 40px;
-  }
-  &__wrapper {
-    margin: 8px 0 16px 0;
-    display: flex;
-  }
-  &__submit {
-    display: flex;
-    justify-content: center;
-    border-radius: 4px;
-    border: none;
-    width: 223px;
-    height: 50px;
-    margin-right: 16px;
-    background-color: #0095ff;
-    color: #ffffff;
-  }
-  &__upload {
-    margin-right: 12px;
-  }
-  &__mohan {
-    width: 50px;
-    height: 50px;
-    border-radius: 30px;
-  }
-}
+@import "./partials/breakpoints";
+@import "./partials/fonts";
+@import "./partials/header";
+@import "./partials/videoInfo";
+@import "./partials/comments";
+@import "./partials//sideBar";
 .main-hero {
   &__video {
     width: 100%;
@@ -83,34 +47,5 @@
     width: 90px;
     height: 34px;
     border-radius: 4px;
-  }
-}
-.side-video {
-  display: flex;
-  flex-direction: column;
-  &__image {
-    width: 120px;
-    height: 70px;
-  }
-  &__section {
-    display: flex;
-  }
-}
-.main-comments {
-  &__mohan {
-    width: 50px;
-    height: 50px;
-    border-radius: 30px;
-  }
-}
-.main-video {
-  display: flex;
-  flex-direction: column;
-  &__wrapper {
-    display: flex;
-    border-bottom: solid 1px #afafaf;
-  }
-  &__views {
-    margin-right: 20px;
   }
 }

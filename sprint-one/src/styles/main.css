@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "Avenir Bold";
+  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
+}
+
+@font-face {
+  font-family: "Avenir Demi";
+  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
+}
+
+@font-face {
+  font-family: "Avenir Medium";
+  src: url(../assets/fonts/AvenirNextLTPro-Medium.otf);
+}
+
+@font-face {
+  font-family: "Avenir Regular";
+  src: url(../assets/fonts/AvenirNextLTPro-Regular.otf);
+}
+
 .main-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,6 +75,201 @@
   width: 50px;
   height: 50px;
   border-radius: 30px;
+}
+
+.main-video {
+  margin: 32px 16px 40px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-video__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: solid 1px #afafaf;
+}
+
+.main-video__views {
+  margin-right: 20px;
+}
+
+.main-video__title {
+  margin: 0;
+  font-family: "Avenir Bold";
+  font-size: 1.74rem;
+}
+
+.main-video__date-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px 0 32px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-video__channel {
+  margin: 0 8px 0 0;
+  font-family: "Avenir Demi";
+  font-size: 1.1rem;
+}
+
+.main-video__date {
+  margin: 0 0 4px 0;
+  color: #afafaf;
+  font-size: 1.05rem;
+}
+
+.main-video__likes {
+  margin: 0 0 24px 0;
+}
+
+.main-video__views {
+  margin: 0 20px 0 0;
+}
+
+.main-video__icon {
+  margin: 0 8px 24px 0;
+}
+
+.main-video__content {
+  margin: 0;
+  margin-top: 24px;
+  font-family: "Avenir Regular";
+  font-size: 0.754rem;
+  line-height: 1.3rem;
+}
+
+.main-comments {
+  margin: 0 16px;
+}
+
+.main-comments__mohan {
+  width: 48px;
+  height: 48px;
+  border-radius: 30px;
+  margin: 0 10px 54px 0;
+}
+
+.main-comments__title {
+  margin: 0 0 32px 0;
+}
+
+.main-comments__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom: solid 1px #afafaf;
+}
+
+.main-comments__conversation {
+  margin: 0;
+}
+
+.main-comments__comment {
+  width: 224px;
+  height: 96px;
+}
+
+.main-comments__submit {
+  margin-bottom: 24px;
+}
+
+.main-comments__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 1px #afafaf;
+}
+
+.main-comments__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 24px 0 10px 0;
+}
+
+.main-comments__name {
+  margin: 0;
+}
+
+.main-comments__image {
+  height: 48px;
+  width: 48px;
+  margin: 0 16px 110px 0;
+}
+
+.main-comments__date {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0;
+}
+
+.main-comments__content {
+  margin: 0 0 24px 0;
+}
+
+.side-video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.side-video__section {
+  margin: 0 16px 24px 16px;
+}
+
+.side-video__image {
+  width: 120px;
+  height: 70px;
+  margin-right: 16px;
+}
+
+.side-video__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.side-video__name {
+  margin: 0;
+  font-family: "Avenir Demi";
+  font-size: 0.89rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.side-video__author {
+  margin: 16px 0 0 0;
+  font-family: "Avenir Regular";
 }
 
 .main-hero__video {
@@ -120,53 +335,5 @@
   width: 90px;
   height: 34px;
   border-radius: 4px;
-}
-
-.side-video {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.side-video__image {
-  width: 120px;
-  height: 70px;
-}
-
-.side-video__section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.main-comments__mohan {
-  width: 50px;
-  height: 50px;
-  border-radius: 30px;
-}
-
-.main-video {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.main-video__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-bottom: solid 1px #afafaf;
-}
-
-.main-video__views {
-  margin-right: 20px;
 }
 /*# sourceMappingURL=main.css.map */

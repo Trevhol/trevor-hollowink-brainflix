@@ -1,0 +1,48 @@
+.main-video {
+  margin: 32px 16px 40px 16px;
+  display: flex;
+  flex-direction: column;
+  &__wrapper {
+    display: flex;
+    border-bottom: solid 1px #afafaf;
+  }
+  &__views {
+    margin-right: 20px;
+  }
+  &__title {
+    margin: 0;
+    font-family: "Avenir Bold";
+    font-size: 1.74rem;
+  }
+  &__date-wrapper {
+    display: flex;
+    margin: 16px 0 32px 0;
+    align-items: center;
+  }
+  &__channel {
+    margin: 0 8px 0 0;
+    font-family: "Avenir Demi";
+    font-size: 1.1rem;
+  }
+  &__date {
+    margin: 0 0 4px 0;
+    color: #afafaf;
+    font-size: 1.05rem;
+  }
+  &__likes {
+    margin: 0 0 24px 0;
+  }
+  &__views {
+    margin: 0 20px 0 0;
+  }
+  &__icon {
+    margin: 0 8px 24px 0;
+  }
+  &__content {
+    margin: 0;
+    margin-top: 24px;
+    font-family: "Avenir Regular";
+    font-size: 0.754rem;
+    line-height: 1.3rem;
+  }
+}

@@ -1,0 +1,53 @@
+.main-comments {
+  margin: 0 16px;
+  &__mohan {
+    width: 48px;
+    height: 48px;
+    border-radius: 30px;
+    margin: 0 10px 54px 0;
+  }
+  &__title {
+    margin: 0 0 32px 0;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px #afafaf;
+  }
+  &__conversation {
+    margin: 0;
+  }
+  &__comment {
+    width: 224px;
+    height: 96px;
+  }
+  &__submit {
+    margin-bottom: 24px;
+  }
+  &__section {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px #afafaf;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0 10px 0;
+  }
+  &__name {
+    margin: 0;
+  }
+  &__image {
+    height: 48px;
+    width: 48px;
+    margin: 0 16px 110px 0;
+  }
+  &__date {
+    align-items: flex-end;
+    margin: 0;
+  }
+  &__content {
+    margin: 0 0 24px 0;
+  }
+}
