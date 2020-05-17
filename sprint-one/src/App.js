@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import "./styles/main.css";
 import NewComponent from "./components/Heading";
 import Video from "./components/video";
-import Info from "./components/info";
+
+import VideoInfo from "./components/VideoInfo";
+import Comments from "./components/Comments";
 import Side from "./components/Side";
 import videoOne from "./assets/Images/video1.jpg";
 import videoTwo from "./assets/Images/video2.jpg";
@@ -18,7 +20,7 @@ class App extends Component {
     mainVideo: {
       id: "type of <string>",
       title: "BMX Rampage: 2018 Highlights",
-      Description:
+      description:
         "On a gusty day in Southern Utah, a group of 25 daring mountain bikers blew the doors off what is possible on two wheels, unleashing some of the biggest moments the sport has ever seen.While mother nature only  allowed for one full run before the conditions made it impossible to ride, that was all that was needed for event veteran Kyle Strait, who won the event for the second time -- eight years after his ﬁrst Red Cow Rampage title",
       channel: "By Red Cow",
       image: videoZero,
@@ -106,7 +108,9 @@ class App extends Component {
     return (
       <div className="App">
         <NewComponent />
-        <Video />
+        <Video image={this.state.mainVideo.image} />
+        <VideoInfo video={this.state.mainVideo} />
+        <Comments comments={this.state.mainVideo.comments} />
         <Side sideBar={this.state.sideBar} />
       </div>
     );

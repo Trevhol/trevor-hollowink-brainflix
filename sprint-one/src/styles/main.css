@@ -82,14 +82,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
 }
 
 .main-hero__button-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
   width: 100%;
 }
 
@@ -143,5 +141,32 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.main-comments__mohan {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+}
+
+.main-video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-video__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: solid 1px #afafaf;
+}
+
+.main-video__views {
+  margin-right: 20px;
 }
 /*# sourceMappingURL=main.css.map */

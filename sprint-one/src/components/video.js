@@ -1,10 +1,13 @@
 import React from "react";
-import Show from "../assets/Images/video-0.jpg";
+// import Show from "../assets/Images/video-0.jpg";
 import Play from "../assets/Icons/play.svg";
 import Scrubber from "../assets/Icons/scrubber.svg";
 import Full from "../assets/Icons/fullscreen.svg";
 import Volume from "../assets/Icons/volume.svg";
-function Video() {
+
+export default function Video(props) {
+  const Show = props.image;
+  console.log(props.data);
   return (
     <>
       <div className="main-hero">
@@ -30,4 +33,3 @@ function Video() {
     </>
   );
 }
-export default Video;
