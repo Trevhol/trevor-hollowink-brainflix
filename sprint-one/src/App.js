@@ -109,9 +109,13 @@ class App extends Component {
       <div className="App">
         <NewComponent />
         <Video image={this.state.mainVideo.image} />
-        <VideoInfo video={this.state.mainVideo} />
-        <Comments comments={this.state.mainVideo.comments} />
-        <Side sideBar={this.state.sideBar} />
+        <div className="main-desktop">
+          <div className="main-desktop__wrapper">
+            <VideoInfo video={this.state.mainVideo} />
+            <Comments comments={this.state.mainVideo.comments} />
+          </div>
+          <Side sideBar={this.state.sideBar} />
+        </div>
       </div>
     );
   }

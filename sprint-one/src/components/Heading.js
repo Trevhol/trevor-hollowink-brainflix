@@ -8,20 +8,20 @@ function Heading() {
     <>
       <div className="main-header">
         <img className="main-header__logo" src={Logo} />
-        <form>
-          <input
-            className="main-header__bar"
-            type="text"
-            img
-            src={Search}
-            placeholder="Search"
-          />
-          <div className="main-header__wrapper">
-            <button type="submit" className="main-header__submit">
-              <img className="main-header__upload" src={Upload} />
-              UPLOAD
-            </button>
-            <img className="main-header__mohan" src={Mohan} />
+        <form className="main-header__form">
+          <div className="main-header__content">
+            <input
+              className="main-header__bar"
+              type="text"
+              placeholder="Search"
+            />
+            <div className="main-header__wrapper">
+              <button type="submit" className="main-header__submit">
+                <img className="main-header__upload" src={Upload} />
+                UPLOAD
+              </button>
+              <img className="main-header__mohan" src={Mohan} />
+            </div>
           </div>
         </form>
       </div>

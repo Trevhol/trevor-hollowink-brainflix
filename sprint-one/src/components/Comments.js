@@ -21,17 +21,23 @@ export default function commentSection(props) {
       <form className="main-comments__form">
         <h3 className="main-comments__title">3 Comments</h3>
         <h4 className="main-comments__conversation">JOIN THE CONVERSATION</h4>
-        <div className="main-comments_wrapper">
-          <img className="main-comments__mohan" src={Mohan} alt="Mohan image" />
-          <textarea
-            name="message"
-            className="main-comments__comment"
-            placeholder="That was easily the most spectacular BMX moment ever."
-          ></textarea>
+        <div className="main-comments__tablet">
+          <div className="main-comments_wrapper">
+            <img
+              className="main-comments__mohan"
+              src={Mohan}
+              alt="Mohan image"
+            />
+            <textarea
+              name="message"
+              className="main-comments__comment"
+              placeholder="That was easily the most spectacular BMX moment ever."
+            ></textarea>
+          </div>
+          <button type="submit" className="main-comments__submit">
+            COMMENT
+          </button>
         </div>
-        <button type="submit" className="main-comments__submit">
-          COMMENT
-        </button>
       </form>
       <div className="main-comments__call">{comments}</div>
     </section>

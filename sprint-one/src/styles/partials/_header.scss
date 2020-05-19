@@ -11,7 +11,16 @@
   }
   &__bar {
     width: 288px;
-    height: 40px;
+    height: 44px;
+    background-image: url("../assets/Icons/search.svg");
+    padding-left: 44px;
+    background-repeat: no-repeat;
+    background-position: 12px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    border: solid 1px #afafaf;
+    font-family: "Avenir Regular";
+    font-size: 0.89rem;
   }
   &__wrapper {
     margin: 8px 0 16px 0;
@@ -27,6 +36,9 @@
     margin-right: 16px;
     background-color: #0095ff;
     color: #ffffff;
+    font-family: "Avenir Regular";
+    padding-top: 4px;
+    font-size: 0.89rem;
   }
   &__upload {
     margin-right: 12px;
@@ -35,5 +47,58 @@
     width: 50px;
     height: 50px;
     border-radius: 30px;
+  }
+}
+
+@include tablet {
+  .main-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+    margin: 0 24px;
+    &__form {
+      display: flex;
+      align-items: center;
+    }
+    &__bar {
+      width: 200px;
+      margin-right: 24px;
+    }
+    &__submit {
+      width: 120px;
+      margin-right: 24px;
+      height: 48px;
+    }
+    &__logo {
+      margin-right: 169px;
+    }
+    &__mohan {
+      width: 50px;
+      height: 50px;
+    }
+    &__content {
+      display: flex;
+    }
+    &__wrapper {
+      margin: 0;
+    }
+  }
+}
+
+@include desktop {
+  .main-header {
+    margin: 0 180px;
+    display: flex;
+    justify-content: space-between;
+    &__content {
+      justify-content: flex-end;
+      align-self: flex-end;
+      align-items: flex-end;
+    }
+    &__form {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 }

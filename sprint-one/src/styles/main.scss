@@ -4,48 +4,29 @@
 @import "./partials/videoInfo";
 @import "./partials/comments";
 @import "./partials//sideBar";
-.main-hero {
-  &__video {
-    width: 100%;
-    height: 183px;
-    object-fit: cover;
-  }
-  &__play {
-    display: flex;
-    justify-content: center;
-    background-color: #323232;
-    opacity: 0.5;
-    width: 50px;
-    height: 34px;
-    border-radius: 4px;
-  }
-  &__player {
-    display: flex;
-    // position: relative;
-  }
-  &__button-bar {
-    display: flex;
-    // position: absolute;
+@import "./partials/hero";
 
-    width: 100%;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+@include desktop {
+  body {
+    margin-bottom: 24px;
   }
-  &__scrubber {
+  .main-desktop {
     display: flex;
     justify-content: center;
-    background-color: #323232;
-    opacity: 0.5;
-    width: 200px;
-    height: 34px;
-    border-radius: 4px;
-  }
-  &__volume-full {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #323232;
-    opacity: 0.5;
-    width: 90px;
-    height: 34px;
-    border-radius: 4px;
+    margin: 0 180px;
+    &__wrapper {
+      max-width: 712px;
+    }
   }
 }
