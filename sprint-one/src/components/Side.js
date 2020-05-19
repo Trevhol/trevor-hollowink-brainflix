@@ -5,7 +5,7 @@ export default function Side(props) {
   const videos = props.sideBar.map((video, index) => {
     return (
       <div className="side-video__section" key={index}>
-        <div classNam="side-video__images">
+        <div className="side-video__images">
           <img
             className="side-video__image"
             src={video.image}

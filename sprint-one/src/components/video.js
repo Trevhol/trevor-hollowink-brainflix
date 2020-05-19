@@ -1,7 +1,5 @@
 import React from "react";
-// import Show from "../assets/Images/video-0.jpg";
 import Play from "../assets/Icons/play.svg";
-import Scrubber from "../assets/Icons/scrubber.svg";
 import Full from "../assets/Icons/fullscreen.svg";
 import Volume from "../assets/Icons/volume.svg";
 
@@ -17,15 +15,15 @@ export default function Video(props) {
           </video>
           <div className="main-hero__button-bar">
             <div className="main-hero__play">
-              <img src={Play} />
+              <img src={Play} alt="play button" />
             </div>
-            <div class="main-hero__progress-bar">
-              <div class="main-hero__progress-timeline"></div>
-              <div class="main-hero__progress-text">0:00 / 0:42</div>
+            <div className="main-hero__progress-bar">
+              <div className="main-hero__progress-timeline"></div>
+              <div className="main-hero__progress-text">0:00 / 0:42</div>
             </div>
             <div className="main-hero__volume-full">
-              <img src={Full} />
-              <img src={Volume} />
+              <img src={Full} alt="fullscreen button" />
+              <img src={Volume} alt="volume button" />
             </div>
           </div>
         </div>

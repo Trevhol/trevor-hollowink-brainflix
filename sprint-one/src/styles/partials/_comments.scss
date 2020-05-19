@@ -6,7 +6,7 @@
     width: 48px;
     height: 48px;
     border-radius: 30px;
-    margin: 0 10px 48px 0;
+    margin: 0 10px 62px 0;
   }
   &__title {
     margin: 0 0 32px 0;
@@ -94,7 +94,7 @@
   .main-comments {
     display: flex;
     flex-direction: column;
-    margin: 0 24px;
+    margin: 0 20px;
     &__wrapper {
       justify-content: left;
     }
@@ -109,7 +109,7 @@
     }
     &__comment {
       width: 440px;
-      height: 40px;
+      height: 48px;
       margin: 0px;
       margin-right: 16px;
     }
@@ -119,15 +119,19 @@
     }
     &__submit {
       width: 160px;
-      height: 45px;
+      height: 48px;
       margin: 0;
       padding: 0;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
     }
     &__tablet {
       display: flex;
       align-items: center;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
+    }
+    &__conversation {
+      margin-left: 64px;
+      margin-bottom: 4px;
     }
     &__content {
       font-size: 0.909rem;
@@ -138,12 +142,17 @@
   .main-comments {
     margin: 0;
     &__comment {
-      width: 436px;
-    }
-    &__mohan {
+      width: 280px;
     }
     &__submit {
       width: 152px;
+    }
+  }
+}
+@include desk {
+  .main-comments {
+    &__comment {
+      width: 436px;
     }
   }
 }
