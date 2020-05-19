@@ -49,3 +49,11 @@
     }
   }
 }
+@include desktop {
+  .side-video {
+    margin: 0 0 0 24px;
+    &__name {
+      font-size: 0.8rem;
+    }
+  }
+}

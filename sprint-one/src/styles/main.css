@@ -305,6 +305,7 @@
   }
   .main-video__content {
     margin-top: 31px;
+    margin-bottom: 62px;
   }
 }
 
@@ -582,6 +583,15 @@
   }
   .side-video__section {
     margin: 0 0 24px 0;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .side-video {
+    margin: 0 0 0 24px;
+  }
+  .side-video__name {
+    font-size: 0.8rem;
   }
 }
 
