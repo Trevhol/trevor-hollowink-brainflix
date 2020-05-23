@@ -15,6 +15,7 @@ export default function VideoInfo(props) {
         </div>
         <div className="main-video__wrapper">
           <img className="main-video__icon" src={icon} alt="views symbol" />
+
           <p className="main-video__views">{video.views}</p>
           <img className="main-video__icon" src={views} alt="views symbol" />
           <p className="main-video__likes">{video.likes}</p>

@@ -1,0 +1,18 @@
+.main-upload {
+  display: flex;
+  flex-direction: column;
+  margin: 0 16px;
+  &__image {
+    width: 100%;
+  }
+}
+@include tablet {
+  .main-upload {
+    display: flex;
+    margin: 24px;
+    &__button-reverse {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+}

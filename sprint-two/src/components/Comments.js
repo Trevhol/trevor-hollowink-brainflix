@@ -11,7 +11,9 @@ export default function commentSection(props) {
         <div className="main-comments__wrap">
           <div className="main-comments__wrapper">
             <h4 className="main-comments__name">{comment.name}</h4>
-            <p className="main-comments__date">{relativeTime(comment.date)}</p>
+            <p className="main-comments__date">
+              {relativeTime(comment.timestamp)}
+            </p>
           </div>
           <p className="main-comments__content">{comment.comment}</p>
         </div>

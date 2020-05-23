@@ -7,8 +7,9 @@ const DAY_MS = HOUR_MS * 24;
 //milliseconds elapsed since jan 1 / 1970
 const relativeTime = (date) => {
   const currentDate = Date.now();
-  const comparator = new Date(date);
+  const comparator = date;
   const diff = currentDate - comparator;
+
   const isGreaterThan1Year = diff > YEAR_MS;
 
   //checks time in milliseconds for each if statement based off milliseconds. Then returns the value "one day ago" , "1 year ago" etc.

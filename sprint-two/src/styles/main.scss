@@ -5,7 +5,7 @@
 @import "./partials/comments";
 @import "./partials//sideBar";
 @import "./partials/hero";
-
+@import "./partials/upload";
 html,
 body {
   margin: 0;
@@ -29,4 +29,7 @@ body {
       max-width: 712px;
     }
   }
+}
+* {
+  text-decoration: none;
 }

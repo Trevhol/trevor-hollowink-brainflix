@@ -13,27 +13,7 @@ class App extends Component {
         <Heading />
         <Switch>
           <Route path="/" component={Home} exact />
-          {/* // <Route
-          //   path="/"
-          //   render={(routerProps) => (
-          //     <Home
-          //       mainVideo={this.props.mainVideo}
-          //       sideBar={this.props.sideBar}
-          //       {...routerProps}
-          //     />
-          //   )}
-          //   exact
-          // /> */}
-          {/* <Route
-            path="/video/:id"
-            render={(routerProps) => (
-              <Home
-                mainVideo={this.state.mainVideo}
-                sideBar={this.state.sideBar}
-                {...routerProps}
-              />
-            )}
-          /> */}
+          <Route path="/nextvideo/:id" component={Home} />
           <Route path="/upload" component={Upload} />
         </Switch>
       </Router>
