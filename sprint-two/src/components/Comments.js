@@ -22,8 +22,10 @@ export default function commentSection(props) {
   });
   return (
     <section className="main-comments">
-      <form className="main-comments__form">
-        <h3 className="main-comments__title">3 Comments</h3>
+      <form className="main-comments__form" onSubmit={props.handleSubmit}>
+        <h3 className="main-comments__title">
+          {props.comments.length} Comments
+        </h3>
         <h4 className="main-comments__conversation">JOIN THE CONVERSATION</h4>
         <div className="main-comments__tablet">
           <div className="main-comments_wrapper">
