@@ -95,7 +95,7 @@
   margin-right: 16px;
   background-color: #0095ff;
   color: #ffffff;
-  font-family: "Avenir Regular";
+  font-family: "Avenir Medium";
   padding-top: 4px;
   font-size: 0.89rem;
 }
@@ -562,6 +562,8 @@
   width: 120px;
   height: 70px;
   margin-right: 16px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .side-video__title {
@@ -630,7 +632,7 @@
 
 .main-hero__video {
   width: 100%;
-  height: 183px;
+  height: 102.9%;
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
@@ -921,6 +923,29 @@
   }
   .main-upload__button {
     width: 160px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .main-upload {
+    margin: 0 180px;
+  }
+  .main-upload__image {
+    width: 344px;
+  }
+  .main-upload__main-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main-upload__first-wrapper {
+    margin-right: 24px;
+  }
+  .main-upload__second-wrapper {
+    width: 100%;
+  }
+  .main-upload__video-description {
+    height: 94px;
   }
 }
 

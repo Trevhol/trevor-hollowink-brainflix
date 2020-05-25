@@ -30,9 +30,10 @@ class Home extends Component {
           .then((res) => {
             const mainVideo = res.data;
 
-            // Change comments order
-            mainVideo.comments.reverse();
-
+            // sorts the comments from newest to oldest.
+            mainVideo.comments.sort((a, b) => {
+              return b.timestamp - a.timestamp;
+            });
             this.setState({
               mainVideo,
             });
@@ -48,6 +49,10 @@ class Home extends Component {
           `https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0106`
         )
         .then((res) => {
+          const mainVideo = res.data;
+          mainVideo.comments.sort((a, b) => {
+            return b.timestamp - a.timestamp;
+          });
           // if (this.state.mainVideo.id !== res.data.id) {
           this.setState({
             mainVideo: res.data,
