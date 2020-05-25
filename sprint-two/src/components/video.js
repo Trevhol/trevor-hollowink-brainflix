@@ -5,6 +5,7 @@ import Volume from "../assets/Icons/volume.svg";
 
 export default function Video(props) {
   const Show = props.image;
+  const duration = props.duration;
 
   return (
     <>
@@ -19,7 +20,7 @@ export default function Video(props) {
             </div>
             <div className="main-hero__progress-bar">
               <div className="main-hero__progress-timeline"></div>
-              <div className="main-hero__progress-text">0:00 / 0:42</div>
+              <div className="main-hero__progress-text">0:00/{duration}</div>
             </div>
             <div className="main-hero__volume-full">
               <img src={Full} alt="fullscreen button" />

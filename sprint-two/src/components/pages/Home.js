@@ -3,7 +3,7 @@ import VideoInfo from "../VideoInfo";
 import Comments from "../Comments";
 import Side from "../Side";
 
-import Video from "../video";
+import Video from "../Video";
 import axios from "axios";
 
 class Home extends Component {
@@ -17,7 +17,7 @@ class Home extends Component {
   componentDidMount() {
     axios
       .get(
-        `https://project-2-api.herokuapp.com/videos?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0102`
+        `https://project-2-api.herokuapp.com/videos?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0106`
       )
       .then((res) => {
         this.setState({
@@ -25,7 +25,7 @@ class Home extends Component {
         });
         axios
           .get(
-            `https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0102`
+            `https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0106`
           )
           .then((res) => {
             const mainVideo = res.data;
@@ -45,7 +45,7 @@ class Home extends Component {
     } else {
       axios
         .get(
-          `https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0102`
+          `https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0106`
         )
         .then((res) => {
           // if (this.state.mainVideo.id !== res.data.id) {
@@ -56,24 +56,27 @@ class Home extends Component {
         });
     }
   }
+  //handling the button and preventing the page from refreshing .
   handleSubmit = (event) => {
     event.preventDefault();
 
     let id = this.state.mainVideo.id;
     let commentObj = {
-      name: "Trevor",
+      name: "Trevor Hol",
       comment: `${event.target.message.value}`,
     };
     console.log({ commentObj });
 
     this.postComment(id, commentObj);
   };
+  //creating post function with axios.post
   postComment = (id, comment) => {
     axios
       .post(
-        `https://project-2-api.herokuapp.com/videos/${id}/comments?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0102`,
+        `https://project-2-api.herokuapp.com/videos/${id}/comments?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0106`,
         comment
       )
+
       .then((response) => {
         // this.mainVideo(id);
         console.log({ response });
@@ -88,15 +91,15 @@ class Home extends Component {
         this.setState({
           mainVideo,
         });
-      })
-      .catch((error) => {
-        console.log(error);
       });
   };
   render() {
     return (
       <div className="App">
-        <Video image={this.state.mainVideo.image} />
+        <Video
+          image={this.state.mainVideo.image}
+          duration={this.state.mainVideo.duration}
+        />
         <div className="main-desktop">
           <div className="main-desktop__wrapper">
             <VideoInfo video={this.state.mainVideo} />

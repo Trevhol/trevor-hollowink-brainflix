@@ -52,7 +52,9 @@
 }
 @include desktop {
   .side-video {
-    margin: 0 0 0 24px;
+    border-left: solid 1px #afafaf;
+    padding-left: 24px;
+    margin: 0;
     &__name {
       font-size: 0.8rem;
     }

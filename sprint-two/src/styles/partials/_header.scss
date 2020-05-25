@@ -30,6 +30,12 @@
     margin: 8px 0 16px 0;
     display: flex;
   }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   &__submit {
     display: flex;
     justify-content: center;
@@ -43,9 +49,6 @@
     font-family: "Avenir Regular";
     padding-top: 4px;
     font-size: 0.89rem;
-  }
-  &__upload {
-    margin-right: 12px;
   }
   &__mohan {
     width: 48px;
@@ -85,6 +88,7 @@
     }
     &__content {
       display: flex;
+      flex-direction: row;
     }
     &__wrapper {
       margin: 0;

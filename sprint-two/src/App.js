@@ -4,7 +4,7 @@ import Home from "./components/pages/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Heading from "./components/Heading";
 
-import Upload from "./components/pages/upload";
+import Upload from "./components/pages/Upload";
 
 class App extends Component {
   render() {
@@ -14,7 +14,7 @@ class App extends Component {
         <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/nextvideo/:id" component={Home} />
-          <Route path="/upload" component={Upload} />
+          <Route path="/Upload" component={Upload} />
         </Switch>
       </Router>
     );

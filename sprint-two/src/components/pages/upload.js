@@ -27,11 +27,11 @@ export class upload extends Component {
           <div className="main-upload__button-reverse">
             <div className="main-upload__button-wrapper">
               <button type="submit" className="main-upload__button">
-                Publish
+                PUBLISH
               </button>
             </div>
-            <button type="submit" className="main-upload__button">
-              Cancel
+            <button type="submit" className="main-upload__cancel-button">
+              CANCEL
             </button>
           </div>
         </form>
