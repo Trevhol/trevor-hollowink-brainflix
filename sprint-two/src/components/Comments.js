@@ -1,7 +1,7 @@
 import React from "react";
 import Mohan from "../assets/Images/Mohan-muruge.jpg";
 import Grey from "../assets/Images/test.png";
-import relativeTime from "./utility/date";
+import relativeTime from "./utility/Sort";
 
 export default function commentSection(props) {
   const comments = props.comments.map((comment, index) => {

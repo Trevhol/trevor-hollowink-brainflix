@@ -3,7 +3,6 @@ import "./styles/main.css";
 import Home from "./components/pages/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Heading from "./components/Heading";
-
 import Upload from "./components/pages/Upload";
 
 class App extends Component {

@@ -30,19 +30,20 @@ const relativeTime = (date) => {
 
     return days > 1 ? `${days} days ago` : "1 day ago";
   }
-
+  //  creating the hours value
   if (diff > HOUR_MS) {
     const hours = Math.floor(diff / HOUR_MS);
 
     return hours > 1 ? `${hours} hours ago` : "1 hour ago";
   }
+  //  creating the minutes value
 
   if (diff > MINUTE_MS) {
     const minutes = Math.floor(diff / MINUTE_MS);
 
     return minutes > 1 ? `${minutes} minutes ago` : "1 minute ago";
   }
-
+  //  creating the seconds value
   const seconds = Math.floor(diff / 1000);
 
   return seconds > 1 ? `${seconds} seconds ago` : "1 second ago";

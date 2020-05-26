@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import VideoInfo from "../VideoInfo";
 import Comments from "../Comments";
 import Side from "../Side";
-
 import Video from "../Video";
 import axios from "axios";
 
@@ -17,7 +16,7 @@ class Home extends Component {
   componentDidMount() {
     axios
       .get(
-        `https://project-2-api.herokuapp.com/videos?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0107`
+        `https://project-2-api.herokuapp.com/videos?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0108`
       )
       .then((res) => {
         this.setState({
@@ -25,7 +24,7 @@ class Home extends Component {
         });
         axios
           .get(
-            `https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0107`
+            `https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0108`
           )
           .then((res) => {
             const mainVideo = res.data;
@@ -46,18 +45,17 @@ class Home extends Component {
     } else {
       axios
         .get(
-          `https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0107`
+          `https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0108`
         )
         .then((res) => {
           const mainVideo = res.data;
+          //sorting my comments by date when I click off the main video to another video and back.
           mainVideo.comments.sort((a, b) => {
             return b.timestamp - a.timestamp;
           });
-          // if (this.state.mainVideo.id !== res.data.id) {
           this.setState({
             mainVideo: res.data,
           });
-          // }
         });
     }
   }
@@ -74,16 +72,15 @@ class Home extends Component {
 
     this.postComment(id, commentObj);
   };
-  //creating post function with axios.post
+  //creating post function with axios.post , and resetting the state.
   postComment = (id, comment) => {
     axios
       .post(
-        `https://project-2-api.herokuapp.com/videos/${id}/comments?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0107`,
+        `https://project-2-api.herokuapp.com/videos/${id}/comments?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0108`,
         comment
       )
 
       .then((response) => {
-        // this.mainVideo(id);
         console.log({ response });
         const comment = response.data;
         const { comments } = this.state.mainVideo;

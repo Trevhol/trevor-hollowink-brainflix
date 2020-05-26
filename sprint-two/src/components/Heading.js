@@ -18,7 +18,6 @@ function Heading() {
               placeholder="Search"
             />
             <div className="main-header__wrapper">
-              {/* remove button later */}
               <NavLink to="/upload" className="main-header__upload">
                 <button type="submit" className="main-header__submit">
                   <img
