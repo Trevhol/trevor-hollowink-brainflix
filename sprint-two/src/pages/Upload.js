@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Upload from "../../assets/Images/Upload.jpg";
+import Upload from "../assets/Images/Upload.jpg";
 export class upload extends Component {
   render() {
     return (

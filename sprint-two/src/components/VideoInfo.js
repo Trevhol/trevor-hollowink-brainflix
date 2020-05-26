@@ -1,7 +1,7 @@
 import React from "react";
 import icon from "../assets/Icons/icon.svg";
 import views from "../assets/Icons/likes.svg";
-import relativeTime from "./utility/date";
+import relativeTime from "./utility/Sort";
 
 export default function VideoInfo(props) {
   const video = props.video;

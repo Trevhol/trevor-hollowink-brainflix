@@ -14,7 +14,7 @@ export default function Side(props) {
                 className="side-video__image"
                 src={video.image}
                 alt="video preview"
-              ></img>
+              />
             </div>
             <div className="side-video__content">
               <h3 className="side-video__name">{video.title}</h3>
