@@ -8,6 +8,7 @@
   }
   &__title {
     margin: 24px 0 32px 0;
+    font-family: "Avenir Bold";
   }
   &__title-input {
     width: 100%;
@@ -32,7 +33,7 @@
     padding: 14px 0 0 12px;
     resize: none;
     font-family: "Avenir Regular";
-    margin-bottom: 32px;
+    margin-bottom: 31px;
   }
   &__thumbnail {
     font-family: "Avenir Demi";
@@ -79,6 +80,7 @@
     }
     &__title {
       margin: 0;
+      font-size: 2.26rem;
       padding: 48px 0 32px 0;
       border-bottom: solid 1px #afafaf;
     }
