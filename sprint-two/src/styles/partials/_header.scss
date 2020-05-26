@@ -8,6 +8,7 @@
   z-index: 9999;
   padding: 0 16px;
   height: 169px;
+  border-bottom: 1px solid #afafaf;
   &__logo {
     width: 200px;
     height: 32px;
@@ -49,6 +50,9 @@
     font-family: "Avenir Medium";
     padding-top: 4px;
     font-size: 0.89rem;
+  }
+  &__upload-image {
+    padding-right: 12px;
   }
   &__mohan {
     width: 48px;

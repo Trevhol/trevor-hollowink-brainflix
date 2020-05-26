@@ -17,7 +17,7 @@ class Home extends Component {
   componentDidMount() {
     axios
       .get(
-        `https://project-2-api.herokuapp.com/videos?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0106`
+        `https://project-2-api.herokuapp.com/videos?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0107`
       )
       .then((res) => {
         this.setState({
@@ -25,7 +25,7 @@ class Home extends Component {
         });
         axios
           .get(
-            `https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0106`
+            `https://project-2-api.herokuapp.com/videos/1af0jruup5gu?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0107`
           )
           .then((res) => {
             const mainVideo = res.data;
@@ -46,7 +46,7 @@ class Home extends Component {
     } else {
       axios
         .get(
-          `https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0106`
+          `https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0107`
         )
         .then((res) => {
           const mainVideo = res.data;
@@ -78,7 +78,7 @@ class Home extends Component {
   postComment = (id, comment) => {
     axios
       .post(
-        `https://project-2-api.herokuapp.com/videos/${id}/comments?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0106`,
+        `https://project-2-api.herokuapp.com/videos/${id}/comments?api_key=7dcf7623-0c79-4b11-9fcf-431c46d8f0107`,
         comment
       )
 

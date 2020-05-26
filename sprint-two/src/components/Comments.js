@@ -33,7 +33,7 @@ export default function commentSection(props) {
             <textarea
               name="message"
               className="main-comments__comment"
-              placeholder="That was easily the most spectacular BMX moment ever."
+              placeholder="Write comment here"
             ></textarea>
           </div>
           <button type="submit" className="main-comments__submit">

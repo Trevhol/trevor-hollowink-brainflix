@@ -22,7 +22,7 @@ function Heading() {
               <NavLink to="/upload" className="main-header__upload">
                 <button type="submit" className="main-header__submit">
                   <img
-                    className="main-header__upload"
+                    className="main-header__upload-image"
                     src={Upload}
                     alt="plus symbol"
                   />
