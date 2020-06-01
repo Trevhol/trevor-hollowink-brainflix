@@ -1,0 +1,37 @@
+@import "./partials/breakpoints";
+@import "./partials/fonts";
+@import "./partials/header";
+@import "./partials/videoInfo";
+@import "./partials/comments";
+@import "./partials//sideBar";
+@import "./partials/hero";
+@import "./partials/upload";
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #323232;
+  background-color: #ffffff;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+@include desktop {
+  body {
+    margin-bottom: 24px;
+  }
+  .main-desktop {
+    display: flex;
+    justify-content: center;
+    margin: 0 180px;
+    &__wrapper {
+      max-width: 712px;
+    }
+  }
+}
+* {
+  text-decoration: none;
+}

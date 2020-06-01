@@ -1,0 +1,113 @@
+.main-hero {
+  display: flex;
+  &__video {
+    width: 100%;
+    height: 102.9%;
+    object-fit: cover;
+    position: relative;
+    display: flex;
+  }
+  &__play {
+    display: flex;
+    justify-content: center;
+    background-color: #323232;
+    opacity: 0.5;
+    width: 50px;
+    height: 34px;
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+  &__player {
+    display: flex;
+    position: relative;
+  }
+  &__button-bar {
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
+    align-self: flex-end;
+    padding: 0 16px 10px 16px;
+    width: 100%;
+  }
+  &__scrubber {
+    display: flex;
+    justify-content: center;
+    background-color: #323232;
+    opacity: 0.5;
+    width: 140px;
+    height: 34px;
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+  &__volume-full {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #323232;
+    opacity: 0.5;
+    width: 80px;
+    height: 34px;
+    border-radius: 4px;
+  }
+  &__progress-bar {
+    position: relative;
+    width: 150px;
+    height: 34px;
+    flex-grow: 1;
+    margin-right: 8px;
+    padding: 0.625rem;
+    border-radius: 0.187rem;
+    color: white;
+    background: #323232;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__progress-timeline {
+    height: 4px;
+    margin-right: 0.625rem;
+    background: black;
+    flex-grow: 2;
+  }
+  &__progress-text {
+    text-align: center;
+    display: none;
+  }
+}
+@include tablet {
+  .main-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #323232;
+    &__video {
+      width: 700px;
+      height: 400px;
+    }
+    &__progress-text {
+      display: flex;
+      font-family: "Avenir Regular";
+      font-size: 0.89rem;
+    }
+    &__button-bar {
+      padding: 0 8px 10px 8px;
+    }
+    &__play {
+      margin-right: 16px;
+    }
+    &__progress-timeline {
+      margin-right: 16px;
+    }
+    &__progress-bar {
+      margin-right: 16px;
+    }
+  }
+}
+@include desktop {
+  .main-hero {
+    &__video {
+      width: 944px;
+      height: 540px;
+    }
+  }
+}
