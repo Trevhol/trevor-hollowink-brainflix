@@ -22,6 +22,8 @@ const saveComment = (commentData, videoId) => {
 };
 
 app.use(cors());
+// app.use(express.static("./public"));
+// app.use("/static", express.static("public"));
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -37,5 +39,7 @@ app.post("/videos/:id/comments", (req, res) => {
 });
 
 app.post("/videos", videoUploadHandler);
+
+app.put("/videos/:videoId/likes");
 
 app.listen(5000);

@@ -5,6 +5,12 @@ import relativeTime from "./utility/Sort";
 
 export default function VideoInfo(props) {
   const video = props.video;
+  const addLike = () => {
+    let newCount = this.props.likes + 1;
+    this.setState({
+      likes: newCount,
+    });
+  };
   return (
     <div className="main-video">
       <h1 className="main-video__title">{video.title}</h1>
@@ -17,8 +23,10 @@ export default function VideoInfo(props) {
           <img className="main-video__icon" src={icon} alt="views symbol" />
 
           <p className="main-video__views">{video.views}</p>
-          <img className="main-video__icon" src={views} alt="views symbol" />
-          <p className="main-video__likes">{video.likes}</p>
+          <button onClick={props.addLike}>
+            <img className="main-video__icon" src={views} alt="views symbol" />
+            <p className="main-video__likes">{video.likes}</p>
+          </button>
         </div>
       </div>
       <div className="main-video__content-wrapper">

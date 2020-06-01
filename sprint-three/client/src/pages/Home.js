@@ -80,7 +80,7 @@ class Home extends Component {
       comment
     );
     const mainVideo = response.data;
-    console.log("getting videos", Date.now(), mainVideo);
+    // console.log("getting videos", Date.now(), mainVideo);
     // setTimeout(() => {
     // const res = await axios.get(`${BASE_URL}/videos/${id}`);
     // const mainVideo = res.data;
@@ -112,6 +112,12 @@ class Home extends Component {
     //   mainVideo,
     // });
     // });
+  };
+  addLike = () => {
+    let newCount = this.state.likes + 1;
+    this.setState({
+      likes: newCount,
+    });
   };
   render() {
     return (
