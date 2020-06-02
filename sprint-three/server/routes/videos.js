@@ -46,7 +46,7 @@ const writeToDb = async (data) => {
     return false;
   }
 };
-// function that handles the data from the user when they upload a video
+// function that handles the data from the user when they upload a video and saves it to db
 const videoUploadHandler = async (req, res) => {
   const { title, description } = req.body;
   const video = {
@@ -112,7 +112,7 @@ const videoLikesHandler = async (req, res) => {
     }
     return video;
   });
-
+  //saving new likes to db
   try {
     if (likes !== null) {
       await writeToDb(data);
