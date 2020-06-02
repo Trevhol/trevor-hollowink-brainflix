@@ -1,6 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Comment button is functional.
+Clicking on the play image will play the video will play. 
+Clicking on the heart will increment the like count.
 
 ## Available Scripts
 
