@@ -11,7 +11,7 @@ const {
 } = require("./routes/videos");
 
 const videos = JSON.parse(fs.readFileSync("./model/videos.json"));
-console.log(videos);
+//
 const saveComment = (commentData, videoId) => {
   commentData.id = uuid();
   commentData.timestamp = Date.now();
@@ -23,8 +23,7 @@ const saveComment = (commentData, videoId) => {
 };
 
 app.use(cors());
-// app.use(express.static("./public"));
-// app.use("/static", express.static("public"));
+
 app.use(express.json());
 
 app.get("/", (req, res) => {

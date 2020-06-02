@@ -106,8 +106,6 @@ class Home extends Component {
         return this.state.mainVideo.likes;
       });
 
-    console.log(likes);
-
     this.setState({
       mainVideo: {
         ...this.state.mainVideo,

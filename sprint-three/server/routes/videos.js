@@ -3,7 +3,7 @@ const { uuid } = require("uuidv4");
 let videoData = require("../model/videos.json");
 
 const increment = (str) => {
-  // regex /,/g = ALL occurrences of commas
+  // regex /,/g  captures occurrences of commas
   // str.replace(/,g/, '') replaces all commas with empty string
   const incremented = (Number(str.replace(/,/g, "")) + 1).toString();
 
@@ -30,16 +30,14 @@ const videoIdHandler = (req, res) => {
 
   res.json(video);
 };
-
+// my save to database function
 const writeToDb = async (data) => {
   try {
     await fs.writeFile(
       "../server/model/videos.json",
       JSON.stringify(data),
 
-      (err, data) => {
-        console.log(err, data);
-      }
+      (err, data) => {}
     );
     videoData = data;
     return true;
@@ -48,10 +46,8 @@ const writeToDb = async (data) => {
     return false;
   }
 };
-
+// function that handles the data from the user when they upload a video
 const videoUploadHandler = async (req, res) => {
-  // image to come
-  console.log("body", req.body);
   const { title, description } = req.body;
   const video = {
     id: uuid(),
@@ -101,7 +97,7 @@ const videoUploadHandler = async (req, res) => {
     res.status(500).json({ error: { message: "Could not save video to DB" } });
   }
 };
-
+// handles my like button , calling on my increment function from above and saves it to my database down below.
 const videoLikesHandler = async (req, res) => {
   const videoId = req.params.videoId;
   let likes = null;
