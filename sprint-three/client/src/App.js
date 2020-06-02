@@ -12,7 +12,7 @@ class App extends Component {
         <Heading />
         <Switch>
           <Route path="/" component={Home} exact />
-          <Route path="/nextvideo/:id" component={Home} />
+          <Route path="/Sidevideo/:id" component={Home} />
           <Route path="/Upload" component={Upload} />
         </Switch>
       </Router>

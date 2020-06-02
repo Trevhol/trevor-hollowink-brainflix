@@ -7,7 +7,7 @@ export default function Side(props) {
     .filter((video) => video.id !== props.current)
     .map((video, index) => {
       return (
-        <Link to={`/nextvideo/${video.id}`} key={index}>
+        <Link to={`/Sidevideo/${video.id}`} key={index}>
           <div className="side-video__section" key={index}>
             <div className="side-video__images">
               <img

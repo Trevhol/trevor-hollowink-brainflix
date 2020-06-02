@@ -103,7 +103,8 @@
     }
   }
 }
-@include desktop {
+
+@include hero {
   .main-hero {
     &__video {
       width: 944px;

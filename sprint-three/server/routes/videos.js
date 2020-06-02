@@ -2,6 +2,23 @@ const fs = require("fs");
 const { uuid } = require("uuidv4");
 let videoData = require("../model/videos.json");
 
+const increment = (str) => {
+  // regex /,/g = ALL occurrences of commas
+  // str.replace(/,g/, '') replaces all commas with empty string
+  const incremented = (Number(str.replace(/,/g, "")) + 1).toString();
+
+  let i = 1;
+  const withCommas = incremented.split("").map((char, index) => {
+    if (index === i && incremented.length > 3) {
+      i = i + 3;
+      return `,${char}`;
+    }
+    return char;
+  });
+
+  return withCommas.join("");
+};
+
 const allVideosHandler = (req, res) => {
   res.json(videoData);
 };
@@ -85,8 +102,39 @@ const videoUploadHandler = async (req, res) => {
   }
 };
 
+const videoLikesHandler = async (req, res) => {
+  const videoId = req.params.videoId;
+  let likes = null;
+
+  const data = videoData.map((video) => {
+    if (video.id === videoId) {
+      likes = increment(video.likes);
+      return {
+        ...video,
+        likes,
+      };
+    }
+    return video;
+  });
+
+  try {
+    if (likes !== null) {
+      await writeToDb(data);
+      res.status(200).json({ likes });
+    } else {
+      throw new Error("Could not increment like count");
+    }
+  } catch (e) {
+    console.error("Hit error when writing to db:", e);
+    res
+      .status(500)
+      .json({ error: { message: "Could not increment like count" } });
+  }
+};
+
 module.exports = {
   allVideosHandler,
   videoIdHandler,
   videoUploadHandler,
+  videoLikesHandler,
 };

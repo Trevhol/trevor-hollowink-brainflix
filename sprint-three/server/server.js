@@ -7,6 +7,7 @@ const {
   allVideosHandler,
   videoIdHandler,
   videoUploadHandler,
+  videoLikesHandler,
 } = require("./routes/videos");
 
 const videos = JSON.parse(fs.readFileSync("./model/videos.json"));
@@ -40,6 +41,6 @@ app.post("/videos/:id/comments", (req, res) => {
 
 app.post("/videos", videoUploadHandler);
 
-app.put("/videos/:videoId/likes");
+app.put("/videos/:videoId/likes", videoLikesHandler);
 
 app.listen(5000);

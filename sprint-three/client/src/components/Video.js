@@ -5,18 +5,15 @@ import Volume from "../assets/Icons/volume.svg";
 import Player from "../assets/video.mp4";
 export default class Video extends Component {
   vidRef = createRef();
-  // Show = this.props.image;
-  // duration = this.props.duration;
   state = {};
   play = () => {
     console.log(this);
     this.vidRef.current.play();
+    this.vidRef.current.onended = () => {
+      this.vidRef.current.load();
+    };
   };
 
-  end = () => {
-    this.setState({ isPlaying: false });
-    this.vidRef.current.load();
-  };
   render() {
     return (
       <div className="main-hero">
@@ -24,6 +21,7 @@ export default class Video extends Component {
           <video
             ref={this.vidRef}
             src={Player}
+            key={this.props.videoId}
             type="video/mp4"
             className="main-hero__video"
             poster={this.props.image}

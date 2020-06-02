@@ -73,17 +73,12 @@ class Home extends Component {
     event.target.reset();
     await this.postComment(id, commentObj);
   };
-  // creating post function with axios.post , and resetting the state.
   postComment = async (id, comment) => {
     const response = await axios.post(
       `${BASE_URL}/videos/${id}/comments`,
       comment
     );
     const mainVideo = response.data;
-    // console.log("getting videos", Date.now(), mainVideo);
-    // setTimeout(() => {
-    // const res = await axios.get(`${BASE_URL}/videos/${id}`);
-    // const mainVideo = res.data;
 
     // sorts the comments from newest to oldest.
     mainVideo.comments.sort((a, b) => {
@@ -97,26 +92,27 @@ class Home extends Component {
         console.log(this.state.mainVideo);
       }
     );
-    // });
-    // }, 201);
-    // console.log({ response });
-    // const comment = response.data;
-    // const { comments } = this.state.mainVideo;
-
-    // const mainVideo = {
-    //   ...this.state.mainVideo,
-    // };
-    // mainVideo.comments = [comment, ...comments];
-
-    // this.setState({
-    //   mainVideo,
-    // });
-    // });
   };
-  addLike = () => {
-    let newCount = this.state.likes + 1;
+  // using axios . put call to add a like
+  addLike = async () => {
+    const likes = await axios
+      .put(
+        `${BASE_URL}/videos/${this.state.mainVideo.id}/likes`,
+        JSON.stringify({})
+      )
+      .then((res) => res.data.likes)
+      .catch((err) => {
+        console.error(err);
+        return this.state.mainVideo.likes;
+      });
+
+    console.log(likes);
+
     this.setState({
-      likes: newCount,
+      mainVideo: {
+        ...this.state.mainVideo,
+        likes,
+      },
     });
   };
   render() {
@@ -125,10 +121,11 @@ class Home extends Component {
         <Video
           image={this.state.mainVideo.image}
           duration={this.state.mainVideo.duration}
+          videoId={this.state.mainVideo.id}
         />
         <div className="main-desktop">
           <div className="main-desktop__wrapper">
-            <VideoInfo video={this.state.mainVideo} />
+            <VideoInfo video={this.state.mainVideo} addLike={this.addLike} />
             <Comments
               comments={this.state.mainVideo.comments}
               handleSubmit={this.handleSubmit}
